@@ -1,0 +1,26 @@
+public class j_44_InitializingConstructor {
+    String name;
+    int id;
+
+    J_44_InitializingConstructor() {   // 3. constructor creation
+        name = "Pavan Kalyan";         // 4. initializing value
+        id = 100;                      // 5. initializing value
+    }
+
+    public void display() {            // 7. method definition
+        System.out.println(name);      // 8. print name
+        System.out.println(id);        // 9. print id
+    }
+
+    public static void main(String args[]) {   // 1. program execution starts here
+        j_44_InitializingConstructor obj = new j_44_InitializingConstructor();  // 2. object created, constructor called
+        obj.display();   // 6. calling display method
+    }
+}
+/*OUTPUT
+
+Pavan Kalyan
+100
+
+
+*/
