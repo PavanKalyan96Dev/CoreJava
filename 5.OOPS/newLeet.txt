@@ -1,0 +1,2674 @@
+/* Identifier in Java
+
+A name in java program is called identifier. It may be class name, method name, 
+variable name and label name.
+ */
+
+class j_1_Identifier
+{
+    public static void main(String args[])
+    {
+        int number = 10;
+        int Number = 20;
+        int NUMBER = 20; //we can differentiate with case.
+        int NuMbEr = 30;
+        System.out.println(number+" "+Number+" "+NUMBER+" "+NuMbEr); //10 20 20 30
+        int String =40;
+        System.out.println(String); //40
+    }
+}
+
+
+/* Data Types
+Data types in Java define what kind of value a variable can store 
+(like number, character, true/false, object, etc.).
+*/
+
+class j_2_DataTypes
+{
+    public static void main(String args[])
+    {
+            //Integer Types:Used for Whole numbers
+            byte b = 100;      // 1 byte
+            short s = 20000;   // 2 bytes
+            int i = 100000;    // 4 bytes (most common)
+            long l = 900000L;  // 8 bytes
+
+            //Floating point numbers: Used for Decimal numbers
+            float f = 5.75f;   // 4 bytes
+            double d = 19.99;  // 8 bytes (most common)
+
+            //Character Type: Used for Single characters
+            char c = 'A';      // 2 bytes
+            //Boolean Type: Used for true/false values
+            boolean bool = true; // 1 byte
+
+            //Non Primitive Data Types: Used for Objects and Strings ie Arrays, Classes,Objects, Interfaces
+
+            String str = "Hello, World!"; // A sequence of characters
+
+            // Print all the variables
+            System.out.println("Byte: " + b);
+            System.out.println("Short: " + s);
+            System.out.println("Integer: " + i);
+            System.out.println("Long: " + l);
+            System.out.println("Float: " + f);
+            System.out.println("Double: " + d);
+            System.out.println("Character: " + c);
+            System.out.println("Boolean: " + bool);
+            System.out.println("String: " + str);
+
+
+
+    }
+}
+
+//Output:
+/*
+
+Byte: 100
+Short: 20000
+Integer: 100000
+Long: 900000
+Float: 5.75
+Double: 19.99
+Character: A
+Boolean: true
+String: Hello, World!
+
+*/
+
+
+
+
+
+
+/*
+Literals
+
+Literals are fixed values (constants) that you directly write in your code.
+
+👉 In simple words:
+Literal = Actual value given to a variable
+
+ */
+
+public class j_3_Literals {
+    public static void main(String[] args) {
+
+          int a = 10;        // 10 → integer literal
+    float b = 5.5f;    // 5.5 → float literal
+    char c = 'A';      // 'A' → character literal
+    String name = "Pavan";  // "Pavan" → string literal
+    boolean flag = true;    // true → boolean literal
+
+    System.out.println("Literals in Java:");
+    System.out.println("Integer Literal: " + a);
+    System.out.println("Float Literal: " + b);
+    System.out.println("Character Literal: " + c);
+    System.out.println("String Literal: " + name);
+    System.out.println("Boolean Literal: " + flag);
+        
+    }
+}
+
+/* output
+
+Literals in Java:
+Integer Literal: 10
+Float Literal: 5.5
+Character Literal: A
+String Literal: Pavan
+Boolean Literal: true
+
+ */
+
+
+
+
+ /*
+Types of Variables in Java
+
+Division 1 : Based on the type of value represented by a variable all variables are 
+divided into 2 types. They are:
+
+1. Primitive variables
+2. Reference variables
+
+
+Primitive variables:
+Primitive variables can be used to represent primitive values.
+
+Example: int x=10;
+
+Reference variables:
+
+Reference variables can be used to refer objects;
+
+Example: Student s=new Student();
+
+
+*/
+
+
+  Operators 
+
+
+//Operators in Java are special symbols that perform specific operations on one, two, or three operands and return a result.
+
+public class j_5_Operators {
+    public static void main(String[] args) {
+
+
+        //Increment and Decrement Operators
+
+        int x = 5;
+        System.out.println("Original x: " + x); // 5
+        System.out.println("Post-increment x++: " + (x++)); // 5 (then x becomes 6)
+        System.out.println("After post-increment, x: " + x); // 6
+        System.out.println("Pre-increment ++x: " + (++x)); // 7
+        System.out.println("After pre-increment, x: " + x); // 7
+        System.out.println("Post-decrement x--: " + (x--)); // 7 (then x becomes 6)
+        System.out.println("After post-decrement, x: " + x); // 6
+        System.out.println("Pre-decrement --x: " + (--x)); // 5
+        System.out.println("After pre-decrement, x: " + x); // 5
+
+        // 1. Increment & decrement operators we can apply only for variables but not for constant values.other wise we will get compile time error.
+
+                //System.out.println(5++); // Compile-time error: cannot apply '++' to a constant value
+
+        // 2 We can't perform nesting of increment or decrement operator, other wise we will get compile time error
+                //System.out.println(++x++); // Compile-time error: cannot apply '++' to the result of '++x'
+                //System.out.println(x++++); // Compile-time error: cannot apply '++' to the result of 'x++'
+            
+        //3. For the final variables we can't apply increment or decrement operators ,other wise we will get compile time error
+                final int y = 10;
+                //System.out.println(y++); // Compile-time error: cannot apply '++' to a final variable
+
+        
+
+
+
+    
+}
+}
+
+
+
+
+
+
+/* Arithmetic Operations : f we apply any Arithmetic operation b/w 2 variables a & b , 
+the result type is always max(int , type of a , type of b)  
+
+1.byte + byte=int
+2. byte+short=int
+3. short+short=int
+4. short+long=long
+5. char+char=int
+6. char+int=int
+12.*/
+
+
+
+class j_6_Arithmetic_Operators {
+    public static void main(String args[]){
+
+        byte a=10;
+        byte b=20;
+        
+        System.out.println("byte + byte = " + a+b); // Output: 30
+        short c=15;
+        System.out.println("byte + short = " + a+c); // Output: 25
+        
+        short d=20;
+        System.out.println("short + short = " + c+d); // Output: 35
+
+        long e=100L;
+        System.out.println("short + long = " + c+e); // Output: 120
+
+        char f='A';
+        char g='B';
+        System.out.println("char + char = " + f+g); // Output: AB
+
+    }
+}
+
+/*  output
+
+byte + byte = 1020
+byte + short = 1015
+short + short = 1520
+short + long = 15100
+char + char = AB
+
+*/
+
+
+/* INFINITY REPRESENTATION */
+public class j_7_Infinity {
+    
+    public static void main(String[] args) {
+        
+        System.out.println(10/0.0);
+        System.out.println(-10/0.0);
+        System.out.println(0/0.0);
+        System.out.println(10/0);
+    }
+}
+/* OUTPUT
+
+Infinity
+-Infinity
+NaN
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+        at j_7_Infinity.main(j_7_Infinity.java:8)
+
+*/
+
+
+
+
+/*  String Operators
+
+        1. The only overloaded operator in java is ' + ' operator some times it access 
+        arithmetic addition operator & some times it access String concatenation 
+        operator.
+        2. If acts as one argument is String type , then '+' operator acts as concatenation 
+        and If both arguments are number type , then operator acts as arithmetic 
+        operator
+        3. Ex :
+
+
+*/
+public class j_8_String_Operator {
+    public static void main(String[] args) {
+
+    String a="ashok";
+    int  b=10 , c=20 , d=30 ;
+    System.out.println(a+b+c+d);  //output : ashok102030
+    System.out.println(b+c+d+a); //output : 60ashok
+    System.out.println(b+c+a+d); //output : 30ashok30
+    System.out.println(b+a+c+d); //output : 10ashok2030
+        
+    }
+    
+}
+
+
+
+//Relational Operators
+
+public class j_9_Relational_Operator {
+    public static void main(String args[]){
+        int a=10 , b=20, c=30;
+        System.out.println(a>b); // Output: false
+        System.out.println(a<b); // Output: true
+        System.out.println(a>=b); // Output: false
+        System.out.println(a<=b); // Output: true
+        System.out.println(a==b); // Output: false
+        System.out.println(a!=b); // Output: true
+
+        boolean result=false;
+        boolean pending =true;
+
+    // relational operators can be applied to boolean values      
+    //System.out.println(result>pending); // Output: error
+
+        //Can't apply RO to the Object types
+        String s1="durga";
+        String s2="durga";
+        //System.out.println(s1>s2); // Output: error
+      
+    //Nesting relational Operator is not allowed
+   // System.out.println(a>b>c); // Output: error
+
+        
+       
+    }
+    
+}
+
+
+
+//Equality Operator
+/*  We can apply equality operators for every primitive type including boolean type also
+but we can't apply equality operator for the reference types because in that case it will compare the references but not the content of the objects.
+
+*/
+public class j_10_Equality_Operator {
+    public static void main(String[] args) {
+        System.out.println(10 == 20) ;  //false
+        System.out.println('a' == 'b' );   //false
+        System.out.println('a' == 97.0 );  //true
+        System.out.println(false == false); //true
+    }
+}
+
+
+
+ /*  What is the difference between == operator and .equals( ) method ?
+            In general we can use .equals( ) for content comparision where as == operator
+            for reference comparision
+        
+                String  s1=new String("ashok");
+                String  s2=new  String("ashok");
+                System.out.println(s1==s2);  //false
+                System.out.println(s1.equals(s2));  //true  */
+
+
+//Instanceof Operator
+//The instanceof operator in Java is used to check whether an object belongs to a specific class or interface.
+public class j_11_InstanceOf_Operator {
+    
+    public static void main(String[] args) {
+        
+        String s1="pavan";
+        System.out.println(s1 instanceof String);  // true
+
+            Integer num = 10;
+
+            System.out.println(num instanceof Integer);  // true
+            System.out.println(num instanceof Number);   // true (parent class)
+            System.out.println(num instanceof Object);   // true (top class)
+
+
+;    }
+}
+
+
+/*BitWise Operators
+ Bitwise operators are used to perform operations directly on binary (bits) of integer values (int, byte, short, long).
+👉 These operators work at bit level (0s and 1s).
+
+1. & (AND) :  If both arguments are true then only result is true. 
+2. | (OR) :  if at least one argument is true. Then the result is true. 
+3. ^ (X-OR) :  if both are different arguments. Then the result is true.  
+
+
+
+*/
+
+/*Bitwise Operators.java
+Bitwise operators are used to perform operations directly on binary (bits) of integer values (int, byte, short, long). 
+These operators work at bit level (0s and 1s).
+
+Bitwise Operators : ( & , | , ^) 1. & (AND)
+
+1.If both arguments are true then only result is true.
+2. | (OR): if at least one argument is true. Then the result is true.
+3. ^ (X-OR) : if both are different arguments. Then the result is true.
+ */
+class j_12_Bitwise_Operators {
+    public static void main(String[] args) {
+
+        // And Operator &
+        System.out.println(true&true); //true
+        System.out.println(true&false); //false
+        System.out.println(false&true); //false
+        System.out.println(false&false); //false
+
+        // OR Operator |
+        System.out.println(true|true); //true
+        System.out.println(true|false); //true
+        System.out.println(false|true); //true
+        System.out.println(false|false); //false
+            
+        System.out.println(4&5);//4            using binary digits
+        System.out.println(4|5);//5      4-->100
+        System.out.println(4^5);//1
+
+        // Bitwise complement (~) (tilde symbol) operator:
+        int a = 5; // In binary: 0000 0101
+        int b = ~a; // Bitwise complement of a =-6
+
+        //Boolean Compliment(!) operator
+        boolean x = true;
+        boolean y = !x; // y will be false
+
+    }
+ }
+
+
+ /*Logical Operators
+
+Logical operators are used to combine multiple conditions (boolean expressions) and return a boolean result (true or false).
+
+x&&y : y will be evaluated if and only if x is true.(If x is false then y won't be evaluated 
+i.e., If x is ture then only y will be evaluated)
+
+x||y : y will be evaluated if and only if x is false.(If x is true then y won't be evaluated i.e., 
+If x is false then only y will be evaluated)
+
+
+*/
+public class j_13_Logical_Operators {
+    public static void main(String[] args) {
+
+            int x=10 , y=15 ;
+            if(++x < 10  ||  ++y > 15) {    //instead of || using  &,&&, |
+
+                x++;
+            }
+            else
+            {
+                y++;
+            }
+            System.out.println("x: " + x); // Output: 12
+            System.out.println("y: " + y); // Output: 16
+            
+    }
+    
+}
+
+
+
+
+//Type Casting
+
+/*
+Type casting in Java means converting one data type into another data type.
+
+Implicit Type Casting (Widening):Converting smaller data type → bigger data type automatically
+
+byte → short → int → long → float → double
+
+Explicit Type Casting (Narrowing) : Converting bigger data type → smaller data type manually
+
+Syntax:
+
+datatype variable = (datatype) value;
+
+*/
+public class j_14_Type_Casting {
+    public static void main(String[] args) {
+        
+        //Implicit Type Casting (Widening)
+
+        int x='a';
+        System.out.println(x);  //97
+
+        /* 1.The compiler is responsible to perform this type casting.
+            2. When ever we are assigning lower datatype value to higher datatype variable
+            then implicit type cast will be performed .
+            3. It is also known as Widening or Upcasting.
+            4. There is no loss of information in this type casting.
+            
+            */
+        //Explicit Type Casting (Narrowing)
+        double d=10.5;
+        int y=(int)d;
+        System.out.println(y); //10
+        /* 
+                        1. Programmer is responsible for this type casting. 
+                        2. Whenever we are assigning bigger data type value to the smaller data type  variable then explicit type casting is required. 
+                        3. Also known as Narrowing or down casting. 
+                        4. There may be a chance of loss  of information in this type casting. 
+        
+        */
+    }
+    
+}
+
+
+
+// Assignment Operators
+
+public class j_15_Assignment_Operator_Types {
+    
+    public static void main(String args[]){
+        
+        //simple assignment operator
+
+        int x=100;
+        System.out.println(x);
+
+        //chained Assignement Operator
+        int a,b,c;
+        a=b=c=100;
+
+        System.out.println(a);//100
+        System.out.println(b);//100
+        System.out.println(c);//100
+
+        int d=10,e=50,f=100;
+        System.out.println(d);//10
+        System.out.println(e); //50
+        System.out.println(f);//100
+
+
+        //compound assignment operator
+        d += 10;
+        e -= 20;
+        f *= 2;
+
+        System.out.println(d);//20
+        System.out.println(e); //30
+        System.out.println(f);//200
+    }
+}
+
+
+
+// Ternary Operator
+/* ternary operator 
+The ternary operator is a shortcut for if-else condition in Java.
+It is called ternary because it uses 3 operands.
+
+*/
+public class j_16_Ternary_Operator {
+
+    public static void main(String args[]){
+
+        int x=(10>20)?10:20;
+        System.out.println(x); // Output: 20
+
+
+    }
+    
+}
+
+
+
+// Shift Operators
+/*Shift Operators in java
+
+Java shift operators are used to move (shift) bits left or right inside an integer number.
+There are three shift operators in Java:
+
+1. Left Shift (<<): Shifts bits to the left, filling the rightmost bits with zeros.
+2. Right Shift (>>): Shifts bits to the right, filling the leftmost bits with the sign bit (the leftmost bit) for signed numbers.
+3. Unsigned Right Shift (>>>): Shifts bits to the right, filling the leftmost bits with zeros regardless
+of the sign of the number.
+
+*/
+
+class j_17_Shift_Operators {
+    public static void main(String[] args) {
+
+        int a = 8; // In binary: 0000 1000
+
+        // Left Shift (<<)
+        int leftShift = a << 2; // Shifts bits to the left by 2 positions
+        System.out.println("Left Shift (8 << 2): " + leftShift); // Output: 32 (In binary: 0010 0000)
+
+        // Right Shift (>>)
+        int rightShift = a >> 2; // Shifts bits to the right by 2 positions
+        System.out.println("Right Shift (8 >> 2): " + rightShift); // Output: 2 (In binary: 0000 0010)
+
+        // Unsigned Right Shift (>>>)
+        int unsignedRightShift = a >>> 2; // Shifts bits to the right by 2 positions, filling with zeros
+        System.out.println("Unsigned Right Shift (8 >>> 2): " + unsignedRightShift); // Output: 2 (In binary: 0000 0010)
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+/*Flow Control
+Flow control describes the order in which all the statements will be executed at run 
+time. */
+
+
+//if else
+
+
+/* Flow control describes the order in which all the statements will be executed at run time.
+
+The argument to the if statement should be Boolean by mistake if we are providing any other type we will get "compile time error". */
+class j_18_If_Else {
+    public static void main(String[] args) {
+
+        //error 
+        /*int age = 0;
+
+        if (age) {
+            System.out.println("Hello.");
+        } else {
+            System.out.println("Hi");
+        }*/
+
+//error
+/* 
+            int age = 20;
+            if(age=30){
+                System.out.println("Hello.");
+            } else {
+                System.out.println("Hi");
+            }
+                */
+            //Correct way
+            int age=20;
+            if(age==30){
+                System.out.println("Age is 30");
+            }
+            else
+            {
+                System.out.println("Age is not 30"); //Age is not 30
+            }
+
+    
+            boolean b=false;
+                if(b=true) //We are not comparing b with true but we are assigning true to b so it will always return true and it will print hello
+                {
+                    System.out.println("hello"); //hello
+                    }else{
+                System.out.println("hi");
+                }
+        
+            //Comaparison Operator
+            
+            boolean car=false;
+            if(car==true)
+            {
+                System.out.println("car is available");
+            }
+            else{
+                System.out.println("Car is not available"); //car is not available
+            }
+            //Without curly braces we can take only one statement under if, but it should not be declarative statement.
+            if(true){
+                System.out.println("hello"); //hello
+            }
+
+                            
+                if(true)
+
+                    System.out.println("hello"); //Assumes this is inside the if block and it will print hello
+                    System.out.println("hello"); //Assume this is outside the if block and it will print hello
+                    
+
+}
+}
+
+
+
+
+//Switch block
+
+//Switch Block
+/*If several options are available then it is not recommended to use if-else we should go 
+for switch statement.Because it improves readability of the code. */
+
+public class j_19_Switch_Block {
+    public static void main(String[] args) {
+        
+        int day=3;
+        switch(day)
+        {
+            case 1:
+                System.out.println("Monday");
+                break;
+            case 2:
+                System.out.println("Tuesday");
+                break;
+            case 3:
+                System.out.println("Wednesday"); //Wednesday
+                break;
+            case 4:
+                System.out.println("Thursday");
+                break;
+            case 5:
+                System.out.println("Friday");
+                break;
+            case 6:
+                System.out.println("Saturday");
+                break;
+            case 7:
+                System.out.println("Sunday");
+                break;
+            default:
+                System.out.println("Enter a valid number");
+
+        }
+    }
+    
+}
+
+
+
+        /*Every case label should be "compile time constant" otherwise we will get compile time
+error.
+
+        int x=30;
+        int y=20;
+        switch(x)
+        {
+        case 10:
+        System.out.println("10");
+        case y:  //error
+        System.out.println("20");
+
+        }*/
+    t
+    /*
+If we declare y as final we won't get any compile time error.
+        final int y=20;
+        switch(x)
+        {
+        case 10:
+        System.out.println("10");
+        case y:  //no error
+        System.out.println("20");
+        }
+*/
+
+
+ //With in the switch we can take the default any where, but it is convension to take default as last case.
+
+        /*  int ab=0;
+        switch(ab) 
+        { 
+        default:
+        System.out.println("default");
+        case 0: 
+        System.out.println("0"); //0
+        break;
+        case 1:
+        System.out.println("1");
+        case 2: 
+        System.out.println("2");*/
+
+
+// while loop
+
+/* While loop:
+
+If we don't know the no of iterations in advance then best loop is while loop
+
+ */
+public class j_20_While_Loop {
+    public static void main(String[] args) {
+        //example 1
+        while(true)
+        {
+            //System.out.println("hello");//infinite loop
+            
+        }
+}
+}
+
+//unreachable sttement 1
+ /*while(true){
+            System.out.println("Hello World");
+        }
+        System.out.println("Welcome to Java"); //unreachable code */
+
+//unreachable statement 2
+ /*while(false)
+        {
+            System.out.println("Hello World");//error
+        }
+        System.out.println("Welcome to Java"); 
+*/
+
+        
+        
+
+
+//do while
+
+//do while
+//If we want to execute loop body at least once then we should go for do-while. 
+
+public class j_21_do_while {
+    
+    public static void main(String args[])
+    {
+        int a=10,b=20;
+        do
+        {
+            System.out.println("hello");//hello
+            
+        }
+        while(a>b);
+        System.out.println("hi"); //hi
+    }
+}
+
+
+// FOR LOOP
+//for loop: This is the most commonly used loop and best suitable if we know the no of iterations in advance.
+public class j_22_for_loop {
+    
+    public static void main(String[] args) {
+
+    int j=0;
+    for(System.out.println("Hello world");j<3;j++)
+    {
+        System.out.println("Welcome to java " + j + " time");//Welcome to java
+
+    }
+    System.out.println("end of the loop j value is "+j);
+        
+    }
+}
+/* OUTPUT
+
+Hello world
+Welcome to java 0 time
+Welcome to java 1 time
+Welcome to java 2 time
+end of the loop j value is 3
+
+*/
+
+//Increment & Decrement in the 'for' loop
+
+//Increment and Decrement in for loop
+public class j_23_Increment_Decrement {
+    public static void main(String args[]){
+
+        int i=0;
+        for(System.out.println("Hello");i<3;System.out.println("hi"))
+        {
+            i++;
+        }
+    }
+    
+}
+/*  output
+
+Hello
+hi
+hi
+hi
+
+
+
+*/
+
+// break
+
+//break statement: It is used to terminate the loop or switch statement. It is used to come out of the loop immediately.
+public class j_24_break_statement {
+
+    public static void main(String[] args) {
+        
+        for(int i=0;i<5;i++){
+        if(i==3){
+            break;
+        }
+        System.out.println("hello "+i); //unreachable code
+    }
+}  
+}
+/* OUTPUT
+
+hello 0
+hello 1
+hello 2
+
+*/
+
+
+// continue
+//We can use continue statement to skip current iteration and continue for the next iteration. 
+public class j_25_continue_statement {
+    public static void main(String args[]){
+
+        for(int i=0;i<5;i++)
+        {
+            if(i==2)
+            {
+                continue;
+            }
+        System.out.println("hello "+i);
+
+        }
+    }
+    
+}
+/* OUTPUT
+
+hello 0
+hello 1
+hello 3
+hello 4
+
+*/
+
+
+/*We can use continue only inside loops if we are using anywhere else we will get compile time error saying "continue outside of loop". 
+
+          for(int j=0;j<5;j++)
+        {
+            if(j==2)
+            {
+            }
+            continue;
+        System.out.println("hello "+j); // error: continue outside of loop
+
+
+        }*/
+
+
+
+/*  Arrays in Java
+
+An array is an indexed collection of fixed number of homogeneous data elements.  
+The main advantage of arrays is we can represent multiple values with the same name 
+so that readability of the code will be improved.
+
+But the main disadvantage of arrays is:
+
+Fixed in size that is once we created an array there is no chance of increasing or 
+decreasing the size based on our requirement that is to use arrays concept compulsory 
+we should know the size in advance which may not possible always.  
+
+
+*/
+public class j_26_Arrays_Single_Dimensional {
+    public static void main(String[] args) {
+        
+
+        // single dimensional array declarations
+
+        int[] a; // valid recommended way
+        //int []a;  valid but not recommended way
+        //int a[]; valid but not recommended way
+
+        //At the time of declaration we can't specify the size otherwise we will get compile time error. 
+
+        int b[]; // valid declaration
+       // int c[5]; //error: array dimension missing
+    }
+    
+}
+
+
+// Two Dimensional Array
+// Two Dimensional Array
+
+public class j_27_two_dimensional_array {
+    
+    public static void main(String args[]){
+
+        //valid two dimensional arrays declarations
+
+        int a[][];
+        int b [] [];
+        int []c[];
+        int [][]d;
+        int [] [] e;
+        int f [][];
+        
+
+    }
+}
+
+// Three dimensional Array
+// three dimensional array
+
+public class j_28_three_dimensional_array {
+    
+    public static void main(String args[]){
+
+        //valid three dimensional array declarations
+
+        int a[][][];
+        int []b[][];
+        int [][]c[];
+        int [][][]d;
+        int [] [] [] e;
+
+    }
+}
+
+
+
+
+
+// Array declaration rules
+
+
+// Array Declaration Rules
+public class j_29_array_declaration_rules {
+
+    public static void main(String[] args) {
+
+// Rule no 1: At the time of array creation compulsory we should specify the size otherwise we will 
+//get compile time error.  
+
+
+        int a[]=new int[4];
+        System.out.println("size of the array is :"+a.length); //4
+
+//Rule no 2:It  is legal to have an array with size zero in java.
+        int b[]=new int[0];
+        System.out.println("size of the array is :"+b.length); //0
+
+// Rule no 3: f we are taking array size with -ve int value then we will get runtime exception saying 
+//NegativeArraySizeException.  
+
+
+    // int c[]=new int[-20];
+    // System.out.println("size of the array is :"+c.length);//Exception in thread "main" java.lang.NegativeArraySizeException: -20
+       // at j_29_array_declaration_rules.main(j_29_array_declaration_rules.java:22)
+    
+//rule no 4:The maximum allowed array size in java is maximum value of int size [2147483647].  
+
+    //    int d[]=new int[2147483647];
+    //     System.out.println("size of the arr ay is :"+d.length); //2147483647
+        
+        //int e[]=new int[2147483648];  OUTOFMEMORY ERROR
+        //System.out.println("size of the array is :"+e.length); //error: integer number too large: 2147483648
+
+        int f[]=new int[101];
+        System.out.println("size of the array is :"+f.length); //101
+
+
+    }
+    
+}
+
+// Class Declarations
+
+// class name and the file name must be the same. If we declare mulitple classes with no access modifier then we no need to worry about the file names.
+
+ class j_30_class_declarations {
+    
+    public static void main(String[] args) {
+        System.out.println("This is class declaration rules in java");
+    }
+}
+
+class j_30_class_declarations2 {
+    
+    public static void main(String[] args) {
+        System.out.println("This is class declaration rules in java");
+    }
+}
+class j_30_class_declarations3 {
+    
+    public static void main(String[] args) {
+        System.out.println("This is class declaration rules in java");
+    }
+}
+// we can execute by using any class name because all the classes are having main method. we can execute any class by using its name.
+
+
+// Array class methods
+
+public class j_31_array_methods {
+
+    public static void main(String[] args) {
+        int a[]=new int[5];
+        System.out.println("size of the array is :"+a.length); //5
+        // we can not change the size of the array once it is created but we can change the values of the array elements.
+        a[0]=10;
+        a[1]=20;
+        a[2]=30;
+        a[3]=40;
+        a[4]=50;
+        System.out.println("array elements are :");
+        for(int i=0;i<a.length;i++){
+            System.out.println(a[i]); //accessing values of the array elements by using for loop
+        }
+
+        a[2]=10000;
+        System.out.println("a[2] value is: "+a[2]); //10000
+        
+         //enhanced for each loop
+        for(int x:a){
+                System.err.println("array elements are : "+x);
+        }
+        /* Output
+
+        array elements are : 10
+        array elements are : 20
+        array elements are : 10000
+        array elements are : 40
+        array elements are : 50
+        
+        */
+
+       
+        //sort arrays
+        Arrays.sort(a);
+         for(int x:a){
+                System.err.println(x);
+        }
+        /* output
+        10
+        20
+        40
+        50
+        10000
+        */
+
+    
+        //compare arrays by using the equals() method
+
+        int c []={10,20,30,40,50};
+        int d []={10,20,30,40,50};
+        System.out.println(Arrays.equals(c,d));// returns true because both arrays have same elements in the same order
+
+        //binary search method
+        int e []={10,20,30,40,50};
+        System.out.println(Arrays.binarySearch(e,30)); //2 because 30 is present at index 2 in the array
+
+
+     //toString method:it is used to convert the array into a string representation.
+        System.out.println(Arrays.toString(c));
+        /* output
+        [10, 20, 30, 40, 50]
+        */
+
+    }
+    
+}
+
+
+/*Types of imports in java
+1.Explicit class import : You import a specific class only from a package instead of importing all classes.
+2.Implicit class import:  Some classes/packages are automatically available by default, so you don’t need to write the import statement.
+*/
+
+import java.util.Scanner; // explicit class import
+
+public class j_32_typesOfImport {
+    public static void main(String[] args) {
+
+        // Using Scanner (explicit import)
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number:");
+        int num = sc.nextInt();
+        System.out.println("You entered: " + num);
+        
+
+        // Implicit import example (java.lang.* is auto imported)
+        String msg = "This String is from java.lang (implicit import)";
+        System.out.println(msg);
+
+        int max = Math.max(10, 20); // Math is also from java.lang
+        System.out.println("Max is: " + max);
+
+    }
+}
+
+
+
+/*  It is an encapsulation mechanism to group related classes and interfaces into a single 
+module. 
+The main objectives of packages are:  
+ To resolve name confects. 
+ To improve modularity of the application. 
+ To provide security. 
+ There is one universally accepted naming conversion for packages that is to use 
+internet domain name in reverse. 
+
+
+
+
+*/
+package pack1;
+
+public class j_33_package {
+    public static void main(String[] args) {
+        System.out.println("Hello from package"); //Hello from package
+    }
+}
+
+
+
+//classes
+/* A class is a blueprint for the object. 
+
+We can think of the class as a sketch (prototype) of a house. 
+It contains all the details about the floors, doors, windows, etc. 
+Based on these descriptions we build the house. House is the object.
+
+Since many houses can be made from the same description,
+we can create many objects from a class
+
+Syntax:
+
+class ClassName {
+  // fields
+  // methods
+}
+
+Here, fields (variables) and methods represent
+the state and behavior of the object respectively.
+
+fields are used to store data
+methods are used to perform some operations
+
+ */
+
+class BiCycle{
+    int gear;
+    int speed=50;
+
+    public void applyBreak(int decrement)// methods
+    {
+        speed -= decrement;
+        System.out.println("speed is decreased:"+speed);
+    }
+    public void speedUp(int increment) //methods
+    {
+        speed += increment;
+        System.out.println("speed is increased: "+speed);
+    }
+}
+public class j_35_classes {
+
+    public static void main(String[] args)
+    {
+
+        BiCycle b1=new BiCycle(); //object creation
+        System.out.println(b1.speed);
+
+        //An object is called an instance of a class. For example, 
+        //suppose Bicycle is a class then b1 and b2 are the instances of the class. 
+
+        //An object is an instance of a class. When a class is defined, no memory is allocated but when it is
+        // instantiated (i.e., an object is created), memory is allocated.
+
+        b1.applyBreak(10); // accessing the methods by using the object reference variable
+
+        BiCycle b2=new BiCycle(); //object creation
+
+        System.out.println(b2.speed);   // we can access the fields of a class
+        b2.speedUp(10); // accessing the methods by using the object reference variable
+
+        // we can access the fields of a class
+        
+        
+    }
+}
+
+/* Output
+
+50
+speed is decreased:40
+50
+speed is increased: 60
+
+ */
+
+
+
+
+
+/* types of methods
+
+1.User defined: these are the methods that we create in our class to perform specific tasks. 
+2.Built in methods: these are the methods that are already defined in Java and we can use them directly 
+                    without creating them. For example, Math.max() is a built in method that returns the maximum of two numbers.
+3.instance methods: these are the methods that belong to an instance of a class. We need to create an object of the class to call these methods.
+4.static methods: these are the methods that belong to the class rather than any specific instance.
+                We can call these methods without creating an object of the class.
+
+*/
+public class j_38_typesOfMethods {
+
+    public void greet() //user defined method
+    {
+        System.out.println("This is a user defined method");
+        System.out.println(Math.max(10,20));//built in method
+    }
+    public void show() //instance method
+    {
+        System.out.println("This is an instance method");
+    }
+    public static void display() //static method
+    {
+        System.out.println("This is a static method");
+    }
+    public static void main(String args[]){
+
+        j_38_typesOfMethods obj=new j_38_typesOfMethods();
+        obj.greet(); // calling the user defined method 
+        obj.show(); //obj is needed to call the instance method 
+        display(); // we can call the static method directly without creating an object
+    }
+    
+}
+/* OUTPUT
+This is a user defined method
+20
+This is an instance method
+This is a static method
+
+*/
+
+
+
+public class j_39_typesOfVariables {
+// 1) Instance variable
+    int instanceVar = 100;
+
+    // 2) Static variable
+    static int staticVar = 200;
+    public void show() {
+
+        // 3) Local variable
+        int localVar = 300;
+
+        System.out.println("Inside show() method:");
+        System.out.println("Instance Variable = " + instanceVar);
+        System.out.println("Static Variable   = " + staticVar);
+        System.out.println("Local Variable    = " + localVar);
+    }
+    public static void main(String[] args) {
+
+        // Creating object to access instance variable and non-static method
+        j_39_typesOfVariables obj = new j_39_typesOfVariables();
+
+        System.out.println("Inside main() method:");
+
+        // Accessing instance variable using object
+        System.out.println("Instance Variable = " + obj.instanceVar);
+
+        // Accessing static variable directly
+        System.out.println("Static Variable   = " + staticVar);
+
+        // Local variable inside main()
+        int mainLocalVar = 400;
+        System.out.println("Local Variable in main = " + mainLocalVar);
+
+        System.out.println();
+
+        // Calling non-static method
+        obj.show();
+    }
+}
+/* output
+
+Inside main() method:
+Instance Variable = 100
+Static Variable   = 200
+Local Variable in main = 400
+
+Inside show() method:
+Instance Variable = 100
+Static Variable   = 200
+Local Variable    = 300
+
+*/
+
+
+
+//  Access Modifiers
+/*
+    Whenever we are writing our own classes compulsory we have to provide some
+    information about our class to the jvm.
+    Like
+    1. Whether this class can be accessible from anywhere or not.
+    2. Whether child class creation is possible or not.
+    3. Whether object creation is possible or not etc.
+
+    1. Public
+    2. Default
+    3. Final
+    4. Abstract
+    5. Strictfp
+
+ */
+
+//private 
+class j_33_Access_Modifiers {
+    private int x = 10;
+
+    void show()
+    {
+        System.out.println(x);// we can access private variable inside the class only
+    }
+}
+
+public class Demo {
+    public static void main(String[] args) {
+        j_33_Access_Modifiers obj = new j_33_Access_Modifiers();
+        // System.out.println(obj.x); // we cannot access private variables outside of the class
+    }
+}
+
+
+public class j_34_default_access_modifier {
+
+    int x = 20; // default access modifier is used when we do not specify
+    // any access modifier for a variable, method or constructor.
+
+    // default access modifier allows access only within the same package.
+    // It is not accessible from outside the package.
+
+    public void show() {
+        System.out.println(x);
+    }
+}  
+
+class DemoExample {
+
+    public static void main(String[] args) {
+        System.out.println("This is a default access modifier");
+
+        j_34_default_access_modifier obj = new j_34_default_access_modifier();
+        obj.show();
+        System.out.println(obj.x);
+    }
+}
+/*OUTPUT
+
+This is a default access modifier
+20
+20
+
+*/
+
+
+public class j_41_staticblock {
+    public static int dragon=2000;
+    public static void display()
+    {
+
+        System.out.println("dragon value is :"+dragon);
+
+    }
+class staticblockExample{
+    public static void main(String args[]){
+        j_41_staticblock.display(); //accessing static method direcly by using the class name without creating an object of the class because static members can be accessed directly by using the class name.
+        System.out.println("from the main method "+j_41_staticblock.dragon); //accessing the static variable directly by using the class name without creating an object of the class because static members can be accessed directly by using the class name.
+        
+
+    }
+}
+}
+/*  output
+
+dragon value is :2000
+from the main method 2000
+
+
+
+*/
+
+
+
+public class j_42_non_staticblocks {
+    
+    int og=1000;
+
+    public void display(){
+        System.out.println("This is a non static method from the display method");
+        System.out.println(og);
+    }
+}
+class nonStaticExample{
+    public static void main(String args[]){
+        j_42_non_staticblocks obj = new j_42_non_staticblocks();
+        //access non static method by using the object of the class because non static members can be accessed only by using the object of the class.
+        obj.display();
+        //accessing the non static variable by using the object of the class because non static members can be accessed only by using the object of the class
+        System.out.println(obj.og);
+
+    }
+}
+/* OUTPUT
+
+This is a non static method from the display method
+1000
+1000
+
+
+
+*/
+
+
+
+
+
+public class j_43_constructors {
+
+    j_43_constructors() //default constructor is a constructor that does not take any parameters. It is used to initialize the object of the class with default values. 
+    //It is called when we create an object of the class without passing any arguments. 
+    {
+        System.out.println("This is a default constructor");
+    }
+
+    public static void main(String args[]){
+        j_43_constructors obj = new j_43_constructors(); //once the obj is created then the default constructor will be called automatically and the message 
+        //"This is a default constructor" will be printed on the console.
+
+    }
+}
+/*OUTPUT
+
+This is a default constructor
+
+*/
+
+
+public class J_44_InitializingConstructor {
+    String name;
+    int id;
+
+    J_44_InitializingConstructor() {   // 3. constructor creation
+        name = "Pavan Kalyan";         // 4. initializing value
+        id = 100;                      // 5. initializing value
+    }
+
+    public void display() {            // 7. method definition
+        System.out.println(name);      // 8. print name
+        System.out.println(id);        // 9. print id
+    }
+
+    public static void main(String args[]) {   // 1. program execution starts here
+        J_44_InitializingConstructor obj = new J_44_InitializingConstructor();  // 2. object created, constructor called
+        obj.display();   // 6. calling display method
+    }
+}
+/*OUTPUT
+
+Pavan Kalyan
+100
+
+
+*/
+
+
+public class j_45_Parametrized_Constructor 
+{
+    String name;
+    int age;
+    j_45_Parametrized_Constructor(String names,int ages)
+    {
+        name=names;
+        age=ages;
+    }
+    public void display(){
+        System.out.println(name);
+        System.out.println(age);
+    }
+    public static void main(String args[]){
+        j_45_Parametrized_Constructor obj=new j_45_Parametrized_Constructor("pavan",24);
+        obj.display();
+    }
+}
+/*OUTPUT
+
+Pavan Kalyan
+100
+
+*/
+
+
+
+//Constructor Overloading
+
+public class j_46_Constructor_Overloading {
+
+    j_46_Constructor_Overloading(){
+        System.out.println("This is a default constructor");
+    }
+    j_46_Constructor_Overloading(String name){
+        System.out.println("This is a parameterized constructor with one parameter: " + name);
+       
+    }
+    j_46_Constructor_Overloading(String name,int age){
+        System.out.println("This is a parameterized constructor with two parameters: " + name + " and " + age);
+    }
+    public static void main(String args[]){
+           new j_46_Constructor_Overloading();
+           new j_46_Constructor_Overloading("Pavan");
+           new j_46_Constructor_Overloading("Pavan", 24);
+    }
+    
+}
+/*  output
+
+This is a default constructor
+This is a parameterized constructor with one parameter: Pavan
+This is a parameterized constructor with two parameters: Pavan and 24
+
+*/
+
+
+/*The this keyword refers to the current object in a method or constructor.
+
+The most common use of the this keyword is to eliminate the confusion between class
+attributes and parameters with the same name (because a class attribute is shadowed by a method or constructor parameter).
+
+this can also be used to:
+
+Invoke current class constructor
+Invoke current class method
+Return the current class object
+Pass an argument in the method call
+Pass an argument in the constructor call
+ */
+
+public class j_47_this_keyword{
+    String name;
+    int age;
+    j_47_this_keyword(String name,int age)
+    {
+        this.name=name; //this is used to refer to the current object and to differentiate between the class attribute and the parameter with the same name.
+        this.age=age; 
+    }
+    public void display(){
+        System.out.println(name);
+        System.out.println(age);
+    }
+    public static void main(String args[]){
+        j_47_this_keyword obj=new j_47_this_keyword("pavan",24);
+        obj.display();
+    }
+}
+/*OUTPUT
+
+pavan
+24
+
+*/
+
+
+
+public class j_48_Constructor_Chaining {
+
+        j_48_Constructor_Chaining() //2
+        {
+            this(10);//3
+            System.out.println("This is a default constructor");//9
+        }
+        j_48_Constructor_Chaining(int x) //4
+        {
+            this(10,20);//5
+            System.out.println("This is a parameterized constructor with one parameter: " + x);//8
+        }
+        j_48_Constructor_Chaining(int x,int y) //6
+        {
+            System.out.println("This is a parameterized constructor with two parameters: " + x + " and " + y);//7
+        }
+        public static void main(String args[]){
+                new j_48_Constructor_Chaining(); //1
+        } 
+}
+/*OUTPUT
+This is a parameterized constructor with two parameters: 10 and 20
+This is a parameterized constructor with one parameter: 10
+This is a default constructor
+ */
+
+
+/*
+In single inheritance, a sub-class is derived from only one super class.
+It inherits the properties and behavior of a single-parent class.
+ Sometimes, it is also known as simple inheritance */
+
+public class j_49_Single_Level_Inheritance //parent class or super class
+{
+
+    int salary=1000;
+    public void display()
+    {
+        System.out.println("This is parent class method");
+    }
+    
+}
+class child extends j_49_Single_Level_Inheritance //child class or sub class
+{
+    public void show()
+    {
+        System.out.println("This is child class method");
+    }
+}
+class singleLevelExample  //main class
+{
+    public static void main(String args[])
+    {
+        child obj=new child();
+        obj.show();
+        obj.display();
+        System.out.println("The salary is "+obj.salary);
+    }
+}
+/*OUTPUT
+This is child class method
+This is parent class method
+The salary is 1000
+
+*/
+
+
+
+//Multi Level Inheritance
+
+public class j_50_MultiLevel_Inheritance {
+    int salary=1000;
+    public void display()
+    {
+        System.out.println("This is parent class method");
+    }
+    
+}
+class child extends j_50_MultiLevel_Inheritance
+{
+    public void show()
+    {
+        System.out.println("This is child class method");
+    }
+}
+class grandChild extends child
+{
+    public void print()
+    {
+        System.out.println("This is grand child class method");
+    }
+}
+class mulitLevelExample{
+    public static void main(String args[]){
+
+        grandChild obj=new grandChild();
+        obj.print();
+        obj.show();
+        obj.display();
+        System.out.println("The salary is "+obj.salary);
+    }
+}
+/*OUTPUT
+This is grand child class method
+This is child class method
+This is parent class method
+The salary is 1000
+*/
+
+
+//Hierachiral Inheritance
+public class j_51_Hierachiral_Inheritance {
+    j_51_Hierachiral_Inheritance()
+    {
+        System.out.println("This is parent class constructor");
+    }
+
+}
+class child1 extends j_51_Hierachiral_Inheritance
+{
+    child1()
+    {
+        System.out.println("This is child1 class constructor");
+    }
+}
+class child2 extends j_51_Hierachiral_Inheritance
+{
+    child2(){
+        System.out.println("This is child2 class constructor");
+    }
+}
+class hierachiralExample{
+    public static void main(String args[]){
+        new child1();
+        new child2();
+    }
+}
+/*OUTPUT
+This is parent class constructor
+This is child1 class constructor
+This is parent class constructor
+This is child2 class constructor
+ */
+
+
+
+//method over riding: Method overriding in Java allows a subclass to provide a specific implementation of a method that is already defined in its parent class. It is one of the key 
+//features of runtime polymorphism in object-oriented programming.
+public class j_52_method_Overriding {
+    public void show(){
+        System.out.println("This is a parent class method");
+    }
+
+}
+class child extends j_52_method_Overriding{
+    public void show(){
+        System.out.println("This is a child class method");
+    }
+}
+class methodOverridingExample{
+    public static void main(String args[]){
+        child c = new child();
+        c.show();
+    }
+}
+/*OUTPUT
+This is a child class method
+
+*/
+
+
+
+/*super keyword
+Refers to the parent class object. It is used to call parent class method, 
+access parent class variable and to call parent class constructor. 
+It is a reference variable which is used to refer immediate parent class object. 
+
+Accessing the parent class variable if the class and parent variables are same*/
+
+public class j_53_super_keyword{
+
+    int x=10;
+
+}
+class child extends j_53_super_keyword{
+    int x=20;
+
+    void display(){
+        System.out.println("Value of x in child class: "+x);// refers the current class variable
+        System.out.println("Value of x in parent class: "+super.x); //refers to the parent class variable
+    }
+}
+class superKeywordExample{
+    public static void main(String args[]){
+    child obj=new child();
+    obj.display();
+    }
+}
+/*OUTPUT
+Value of x in child class: 20
+Value of x in parent class: 10
+ */
+
+
+
+
+ //accessing the parent class method using the super keyword
+public class j_54_super_method {
+    public void display(){
+        System.out.println("this is a parent class method:");
+    }
+}
+class child extends j_54_super_method{
+    public void display(){
+        System.out.println("this is a child class method:");
+        super.display();// calling the super class method from sub class.
+    }
+}
+class supermethodExample{
+    public static void main(String args[]){
+        child obj=new child();
+        obj.display();
+
+    }
+}
+/*OUTPUT
+this is a child class method:
+this is a parent class method:
+ */
+
+
+
+// calling the parent class constructor using the super keyword
+public class j_55_superParentConstructor {
+    j_55_superParentConstructor(){
+        System.out.println("This is parent class constructor");
+    }
+}
+class child extends j_55_superParentConstructor{
+    child(){
+        super();
+        System.out.println("This is child class constructor");
+    }
+}
+class superParentConstructorExample{
+    public static void main(String args[]){
+        new child();
+    }
+}
+/*OUTPUT
+This is parent class constructor
+This is child class constructor
+ */
+
+
+
+//final keyword
+//final keyword: final means something cannot be changed
+public class j_56_final_Keyword {
+    public static void main(String args[]){
+        final int x=10;
+         // x=300;  we cannot change the value of x because it is declared as final
+        System.out.println(x); //10
+    } 
+}
+
+
+
+
+// final method cannot be overriden
+public class j_57_final_method {
+    public final void display(){
+        System.out.println("Final method cannot be overriden");
+    } 
+}
+class child extends j_57_final_method{
+    //public void display()// we cannot override the final method
+    {
+        System.out.println("Trying to override the final method");
+    }
+}
+class finalmethodExample{
+    public static void main(String args[]){
+    child obj=new child();
+    obj.display();
+}
+}
+/*OUTPUT
+Trying to override the final method
+Final method cannot be overriden
+ */
+
+
+
+
+//final class cannot be inherited
+//final class cannot be inherited
+public final class j_58_final_class {
+    public void display(){
+        System.out.println("This is a final class");
+    }
+}
+class child extends j_58_final_class{
+    // we cannot inherit the final class
+    public void display(){
+        System.out.println("Trying to inherit the final class");
+    }
+}
+class finalClassExample{
+    public static void main(String args[]){
+        child obj=new child();
+        obj.display();
+    }
+}
+
+
+//METHOD OVERLOADING
+//Method overloading means having multiple methods with the same name but different parameters.\
+public class j_59_methodOverloading
+{
+    public int add(int a,int b){
+        return a+b;
+    }
+    public int add(int a,int b,int c){
+        return a+b+c;
+    }
+    public int add(int a,int b,int c,int d){
+        return a+b+c+d;
+    }
+}
+class methodOverloading{
+    public static void main(String args[]){
+        j_59_methodOverloading obj = new j_59_methodOverloading();
+        System.out.println(obj.add(10, 20));
+        System.out.println(obj.add(10, 20, 30));
+        System.out.println(obj.add(10, 20, 30, 40));
+    }
+}
+/*OUTPUT
+30
+60
+100
+ */
+
+
+
+ //ENCAPSULATION
+ /* Encapsulation: wrapping up data and code together into a single unit is called encapsulation. 
+                    It is one of the fundamental OOPS concepts. It is achieved by using access modifiers.
+                    The main purpose of encapsulation is to protect the data from unauthorized access and modification.
+                    It also helps in achieving data hiding. 
+                    In encapsulation, we can make the variables private and provide public getter and setter methods to access and modify the variables.*/
+public class j_60_Encapsulation {
+
+    private int id;
+    private String name;
+    public void setId(int id){
+        this.id=id;
+    }
+    public int getId(){
+        return id;
+    }
+    public void setName(String name){
+        this.name=name;
+    }
+    public String getName(){
+        return name;
+    }
+}
+class EncapsulationExample{
+    public static void main(String args[]){
+        j_60_Encapsulation obj=new j_60_Encapsulation();
+        obj.setId(100);
+        obj.setName("Pavan Kalyan");
+        System.out.println("Id: "+obj.getId());
+        System.out.println("Name: "+obj.getName());
+    }
+}
+/*OUTPUT
+Id: 100
+Name: Pavan Kalyan
+ */
+
+
+
+abstract  class j_61_abstraction {
+    public abstract void bark(); //abstract method: a method without a body and it must be implemented by the subclass.
+    public void eat()//concrete method: a method with a body and it can be inherited by the subclass.
+    {
+        System.out.println("Animal is eating");
+    }
+
+}
+class child extends j_61_abstraction{
+    public void bark() //parent class abstract methood is implemented in the child class
+    {
+        System.out.println("Dog is barking");
+    }
+}
+
+class abstractionExample{
+    public static void main(String args[]){
+        child obj=new child();
+        obj.bark();
+        obj.eat();
+    }
+}
+/*OUTPUT
+Dog is barking
+Animal is eating
+ */
+
+
+//Autoboxing means converting a primitive data type into its corresponding wrapper class object, 
+//and unboxing means converting a wrapper class object back into the primitive type.
+public class j_62_autoboxing {
+    public static void main(String args[]){
+        int a=10;
+        Integer b=a;//autoboxing: converting primitive int to Integer object
+        System.out.println("Autoboxing: "+b);
+
+        Integer c=20;
+        int d=c;//unboxing: converting Integer object to primitive int
+        System.out.println("Unboxing: "+d);
+    
+    }
+}
+/* output
+Autoboxing: 10
+Unboxing: 20
+
+*/
+
+
+
+abstract  class j_63_AbstractAnonymousInnerClass {
+    abstract void display();
+    abstract void show();
+}
+class AbstractAnonymous{
+    public static void main(String args[]){
+        j_63_AbstractAnonymousInnerClass obj = new j_63_AbstractAnonymousInnerClass() {
+            public void display(){
+                System.out.println("Implmeneting display method");
+            }
+            public void show(){
+                System.out.println("Implementing show method");
+            }
+    };
+        obj.display();
+        obj.show();
+    }
+}
+
+//An interface is a blueprint of a class that contains method declarations (no implementation).
+public interface j_64_Interfaces
+{
+    public void show();
+    public void display();
+}
+class child implements j_64_Interfaces{
+    public void show(){
+        System.out.println("Implementing show method");
+    }
+    public void display(){
+        System.out.println("Implementing display method");
+    }
+}
+class InterfacesExample{
+    public static void main(String args[]){
+        child obj=new child();
+        obj.show();
+        obj.display();
+
+    }
+}
+/*Output
+Implementing show method
+Implementing display method
+
+*/
+
+
+interface A{
+
+    public void show();
+}
+interface B{
+    public void display();
+}
+class child implements A,B{
+    public void show(){
+        System.out.println("Implementing show method");
+    }
+    public void display(){
+        System.out.println("Implementing display method");
+    }
+}
+class j_65_InterfaceExample{
+    public static void main(String args[]){
+        child obj=new child();
+        obj.show();
+        obj.display();
+
+    }
+}
+/*OUTPUT
+Implementing show method
+Implementing display method
+ */
+
+
+ public class j_66_Override 
+{
+    public void display(){
+        System.out.println("This is override method of parent class");
+    }
+}
+class child extends j_66_Override{
+    @Override
+    public void display(){
+        System.out.println("This is override method of child class");
+    }
+    public void show(){
+        System.out.println("This is show method of child class");
+    }
+}
+class OverrideExample{
+    public static void main(String args[]){
+       /*output1 
+       j_66_Override obj=new child(); //displays the method which exist in the parent class
+        obj.display();
+        obj.show(); //returns an error because the reference variable is of parent class and show method is not present in parent class */
+
+        child obj=new child();
+        obj.display();
+        obj.show(); //output 2
+        
+    }
+}
+/* OUTPUT1
+j_66_Override.java:20: error: cannot find symbol
+        obj.show();
+           ^
+  symbol:   method show()
+  location: variable obj of type j_66_Override
+
+
+
+OUTPUT2
+This is override method of child class
+This is show method of child class
+
+*/
+
+
+//static methods in interfaces
+interface demo{
+    static void display(){
+        System.out.println("this is static method of interface");
+    }
+}
+class j_67_staticInterfaceMethods{
+    public static void main(String args[]){
+        demo.display();//calling the static method by using the class name 
+    }
+}
+//this is static method of interface
+
+
+//default method in interface is used to provide the implementation of method in interface and it is introduced in java 8 version
+interface salaar{
+    default void display(){
+        System.out.println("Used for Implementing default method of interface");
+    }
+}
+class j_68_defaultMethodsInterfaces implements salaar{
+    public static void main(String args[]){
+        j_68_defaultMethodsInterfaces obj=new j_68_defaultMethodsInterfaces();
+        obj.display();
+    }
+}
+/*OUTPUT
+Used for Implementing default method of interface
+*/
+
+
+@FunctionalInterface
+interface dragon{
+    void display();
+    //void show(); if we declare more than one abstract method in functional interface then it will return an error
+    // because functional interface can have only one abstract method  
+    default void show(){
+        System.out.println("This is default method of functional interface");
+    }
+    static void display1(){
+        System.out.println("This is static method of functional interface");
+    }
+    //MULTIPLE DEFAULT AND STATIC METHODS ARE ALLOWED IN FUNCTIONAL INTERFACE BUT ONLY ONE ABSTRACT METHOD IS ALLOWED IN FUNCTIONAL INTERFACE
+}
+class child implements dragon{
+    public void display(){
+        System.out.println("This is display method of child class");
+    }
+}
+class j_69_FunctionalInterface{
+    public static void main(String args[]){
+        child obj=new child();
+        obj.display();
+        obj.show();
+        dragon.display1();
+    }
+}
+/*OUTPUT
+This is display method of child class
+This is default method of functional interface
+This is static method of functional interface
+*/
+
+
+@FunctionalInterface
+interface csk{
+    void rr();
+}
+public class j_70_functionalInterface{
+    csk obj=new csk(){
+        public void rr(){
+            System.out.println("This is functional interface");
+        }
+    };
+}
+/* output
+This is functional interface 
+*/
+
+
+
+//Instead of the above way we can use the lambda expression to implement the functional interface as shown below
+@FunctionalInterface
+interface gt{
+    void show();
+}
+class j_70_functionalInterface{
+    public static void main(String args[]){
+    gt obj=()->{System.out.println("This is functional interface using lambda expression");};
+    obj.show();
+    }
+}//This is functional interface using lambda expression
+
+
+interface thala {
+    public void display();
+}
+public class j_71_Lambda_Expression{
+    public static void main(String args[]){
+        thala obj=()->System.out.println("From the Lambda Expression");
+        obj.display();
+    }
+}
+/*Output
+From the Lambda Expression
+ */
+interface youth{
+    public int sum(int a,int b);
+}
+class j_72_Lambda_Expression_WithParameters {
+    public static void main(String args[]){
+        youth obj=(a,b)->(a+b);
+        System.out.println("The sum is "+obj.sum(10,20));
+    }
+}
+/*OUTPUT
+The sum is 30
+ */
+
+
+interface jetlees{
+    public int sum(int a,int b);
+}
+class j_73_lambda{
+    public static void main(String args[]){
+        jetlees obj=(a,b)->{
+            System.out.println("The value of a is "+a);
+            System.out.println("The value of b is "+b);
+            return (a+b);
+        };
+        System.out.println("The sum is "+obj.sum(10,20));
+    }
+}
+/*OUTPUT
+The value of a is 10
+The value of b is 20
+The sum is 30
+
+*/
+
+
+public class j_74_try{
+    public static void main(String arga[]){
+        int numerator=10;
+        int denominator=0;
+        try{
+            int result=numerator/denominator;
+            System.out.println("Result is:"+result);
+        }catch(ArithmeticException e){
+            System.out.println("Exception occured: "+e.getMessage());
+
+        }
+        System.out.println("end of the program ");
+    }
+}
+/*OUTPUT
+Exception occured: / by zero
+end of the program 
+ */
+
+
+ Multi Catch exception
+ public class j_75_multi_catch{
+    public static void main(String args[]){
+        int numerator=10;
+        int denominator=0;
+        int arr[]=new int[5];
+
+        try{
+            int result=numerator/denominator;
+            System.out.println("result is:"+result);
+            System.out.println(arr[10]);
+        }
+        catch(ArrayIndexOutOfBoundsException e){
+            System.out.println(e.getMessage());
+        }
+        catch(ArithmeticException e){
+            System.out.println(e.getMessage());
+        }
+    }
+}
+/*output
+/ by zero
+ */
+
+
+
+ THROW KEYWORD
+ class j_76_throwKeyword{
+    public static void main(String args[]){
+        int age=14;
+        if(age<18) throw new ArithmeticException("Your are not eligible to vote");
+        else{
+
+            System.out.println("You are eligible to vote");
+        }
+    }
+}
+/*OUTPUT
+Exception in thread "main" java.lang.ArithmeticException: Your are not eligible to vote
+        at j_76_throwKeyword.main(j_76_throwKeyword.java:4)
+ */
+
+
+throws:The throws keyword indicates what exception type may be thrown by a method.
+public class j_77_throws_Keyword {
+
+    static void checkAge(int age) throws ArithmeticException {
+    if (age < 18) {
+    
+        throw new ArithmeticException("Access denied - You must be at least 18 years old.");
+    }
+    else {
+    System.out.println("Access granted - You are old enough!");
+    }
+}
+
+public static void main(String[] args) {
+    checkAge(15); // Set age to 15 (which is below 18...)
+}
+}
+/*output
+
+Exception in thread "main" java.lang.ArithmeticException: Access denied - You must be at least 18 years old.
+        at j_77_throws_Keyword.checkAge(j_77_throws_Keyword.java:6)
+        at j_77_throws_Keyword.main(j_77_throws_Keyword.java:14)
+
+    */
+
+
+import java.util.Scanner;
+public class j_80_InputScanner {
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int num=sc.nextInt();
+        System.out.println("The number is "+num);
+        sc.close();
+    }
+}
+/*OUTPUT
+20
+The number is 20
+ */
+
+
+
+import java.util.Arrays;
+public class j_79_arrayMethods {
+
+    public static void main(String args[]){
+        int arr[]={1,2,3,4,5,6,7,8,9,10};
+        System.out.println("without toString method " +arr); //without toString method [I@8bcc55f
+        // //toString method(): This method is used to print the array in a readable format.
+        System.out.println("with toString method  "+Arrays.toString(arr)); //with toString method  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+        //parallelSort method: This method is used to sort the array in parallel using multiple threads for better performance on larger arrays
+        
+        int[] arr2 = {8, 2, 6, 1, 9};
+        Arrays.parallelSort(arr2);
+        System.out.println("parallerl sorted"+Arrays.toString(arr2)); //parallerl sorted[1, 2, 6, 8, 9]
+
+        //Arrays.fill method: This method is used to fill the array with a specific value.
+        int arr3[]={0,0,0,00,0};
+        Arrays.fill(arr3,100);
+        System.out.println("filled array "+Arrays.toString(arr3)); //filled array [100, 100, 100, 100, 100]
+
+        //This method creates a copy of the array.
+        int arr4[]=Arrays.copyOf(arr,arr.length);
+        System.out.println("copied array "+Arrays.toString(arr4)); //copied array [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    }
+}
+
+
+
+import java.util.Scanner;
+public class j_80_InputScanner {
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int num=sc.nextInt();
+        System.out.println("The number is "+num);
+        sc.close();
+    }
+}
+/*OUTPUT
+20
+The number is 20
+ */
+
+ class j_81_stringExample{
+    public static void main(String args[]){
+        String str="pavan Kalyan"; //created object1 
+        System.out.println("Name is: "+str);
+        str="Pawan Kalyan is a great actor"; //created object 2
+        System.out.println("Name is: "+str);
+        //object1 and object 2 are created in string pool and they are immutable objects
+        //str variable points to the newly creared object 2 and the object 1 is eligible for garbage collection
+        //Concat
+        str.concat(" and politician"); //not modified but created new object 3 and str variable is still pointing to object 2
+        System.out.println(str); //str is still pointing to object 2 and object 3 is eligible for garbage collection
+
+        //Everytime we try to change the string a new object is created and memory also wasted
+    //so stringBuffer came into picture which is mutable and it will not create new object for every change in the string
+        
+        StringBuffer sb=new StringBuffer("pawan is a great actor"); //created object 4 in heap memory
+        sb.append(" and politician"); //modified the same object 4 and no new object is created
+        System.out.println("with the string buffer: "+sb);
+
+        StringBuilder sb1=new StringBuilder("Janasena is a great party");
+        sb1.append(" and pavan kalyan is the leader of it");
+        System.out.println("with the string builder: "+sb1);
+
+
+        
+
+
+    }
+}
+/*OUTPUT
+
+Name is: pavan Kalyan
+Name is: Pawan Kalyan is a great actor
+Pawan Kalyan is a great actor
+with the string buffer: pawan is a great actor and politician
+with the string builder: Janasena is a great party and pavan kalyan is the leader of it
+*/
+
+
+//sTRING METHODS
+class j_82_StringMethods {
+    public static void main(String args[]) {
+
+        String str = "  Pavan Kalyan  ";
+
+        // 1. length()
+        System.out.println("Length: " + str.length());
+
+        // 2. trim()
+        String trimmed = str.trim();
+        System.out.println("Trimmed: '" + trimmed + "'");
+
+        // 3. toUpperCase()
+        System.out.println("Uppercase: " + trimmed.toUpperCase());
+
+        // 4. toLowerCase()
+        System.out.println("Lowercase: " + trimmed.toLowerCase());
+
+        // 5. charAt()
+        System.out.println("Char at index 2: " + trimmed.charAt(2));
+
+        // 6. substring()
+        System.out.println("Substring (0,5): " + trimmed.substring(0, 5));
+
+        // 7. replace()
+        System.out.println("Replace: " + trimmed.replace("Pavan", "Power"));
+
+        // 8. contains()
+        System.out.println("Contains 'Kalyan'? " + trimmed.contains("Kalyan"));
+
+        // 9. startsWith()
+        System.out.println("Starts with 'Pavan'? " + trimmed.startsWith("Pavan"));
+
+        // 10. endsWith()
+        System.out.println("Ends with 'Kalyan'? " + trimmed.endsWith("Kalyan"));
+
+        // 11. equals()
+        System.out.println("Equals 'Pavan Kalyan'? " + trimmed.equals("Pavan Kalyan"));
+
+        // 12. equalsIgnoreCase()
+        System.out.println("EqualsIgnoreCase 'pavan kalyan'? " + trimmed.equalsIgnoreCase("pavan kalyan"));
+
+        // 13. indexOf()
+        System.out.println("Index of 'K': " + trimmed.indexOf('K'));
+
+        // 14. lastIndexOf()
+        System.out.println("Last Index of 'a': " + trimmed.lastIndexOf('a'));
+
+        // 15. concat()
+        System.out.println("Concat: " + trimmed.concat(" is a hero"));
+
+        // 16. split()
+        String[] words = trimmed.split(" ");
+        System.out.println("Split words:");
+        for (String word : words) {
+            System.out.println(word);
+        }
+    }
+}
+/*OUTPUT
+Length: 16
+Trimmed: 'Pavan Kalyan'
+Uppercase: PAVAN KALYAN
+Lowercase: pavan kalyan
+Char at index 2: v
+Substring (0,5): Pavan
+Replace: Power Kalyan
+Contains 'Kalyan'? true
+Starts with 'Pavan'? true
+Ends with 'Kalyan'? true
+Equals 'Pavan Kalyan'? true
+EqualsIgnoreCase 'pavan kalyan'? true
+Index of 'K': 6
+Last Index of 'a': 10
+Concat: Pavan Kalyan is a hero
+Split words:
+Pavan
+Kalyan
+ */
+
+
+ //checked exceptions in java
+ /*checked exceptions
+Exceptions that are checked at compile time
+✔ The compiler forces you to handle them
+✔ Or you must declare them using throws
+
+IOException,SQLException and FileNotFoundException are the examples of checked exceptions
+*/
+
+import java.io.*;
+
+class j_83_checkedExceptions {
+    public static void main(String args[]) throws IOException {
+        FileReader fr = new FileReader("abc.txt"); // checked exception
+        BufferedReader br = new BufferedReader(fr);
+    }
+}
+/*OUTPUT
+Exception in thread "main" java.io.FileNotFoundException: abc.txt (No such file or directory)
+        at java.base/java.io.FileInputStream.open0(Native Method)
+        at java.base/java.io.FileInputStream.open(FileInputStream.java:216)
+        */
+
+
+
+
+
+
+
+
+
+
+
